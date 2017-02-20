@@ -3,7 +3,7 @@ Transfer files recursively from one server to another using Python and FTP.
 
 Code example (running Fy):
 ```
-from .modules import fy
+import fy.fy
 
 ftp_servers = {
         "My_Ftp_Site_Source": ["ftp.yoursite.com", "usrname1", "paswd1", "/home/myuser/data"]
