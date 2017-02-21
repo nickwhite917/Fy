@@ -1,8 +1,9 @@
 # Fy
-Pronounced (/'faɪ/)
+## Complex file transfer and ETL using Python and FTP.
 
-Transfer files recursively from one server to another using Python and FTP. 
-
+## Features
+### Workflows
+**Workflows** are the heart of Fy. A Fy Workflow is a list of **Transfers** to run. A **Transfer** is defined by a sender and reciever, along with their respective root directory path. Fy will transfer files and folders under the **sender's root directory** to the **reciever's root directory** and can be told to overwrite, skip, append, etc..
 TODO: Write a project description
 ## Installation
 TODO: Describe the installation process
