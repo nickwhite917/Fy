@@ -1,6 +1,6 @@
-from fy.ConfigManager import ConfigManger
 from fy.Mapping import Mapping
 from fy.Utils import *
+from fy.config.ConfigManager import ConfigManger
 
 
 class Workflow(object):
