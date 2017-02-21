@@ -1,9 +1,30 @@
 # Fy
-Transfer files recursively from one server to another using Python and FTP. 
+## Complex file transfer and ETL using Python and FTP.
 
-Code example (running Fy):
+## Features
+### Workflows
+**Workflows** are the heart of Fy. A Fy Workflow is a list of **Transfers** to run. A **Transfer** is defined by a sender and reciever, along with their respective root directory path. Fy will transfer files and folders under the **sender's root directory** to the **reciever's root directory** and can be told to overwrite, skip, append, etc..
+TODO: Write a project description
+## Installation
+TODO: Describe the installation process
+## Usage
+TODO: Write usage instructions
+## Contributing
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+## History
+TODO: Write history
+## Credits
+TODO: Write credits
+## License
+TODO: Write license
+
+##Code examples (running Fy):
 ```
-from .modules import fy
+import fy.fy
 
 ftp_servers = {
         "My_Ftp_Site_Source": ["ftp.yoursite.com", "usrname1", "paswd1", "/home/myuser/data"]
