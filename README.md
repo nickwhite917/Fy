@@ -2,7 +2,6 @@
 Pronounced (/'faɪ/)
 Transfer files recursively from one server to another using Python and FTP. 
 
-# ${1:Project Name}
 TODO: Write a project description
 ## Installation
 TODO: Describe the installation process
