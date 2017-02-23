@@ -1,7 +1,7 @@
 import ftplib
+import logging
 
-from fy.Utils import *
-
+logger = logging.getLogger(__name__)
 
 class Server(object):
     """
@@ -26,11 +26,10 @@ class Server(object):
                 self.ftp_conn.cwd(root_folder)
             else:
                 self.root_folder = self.ftp_conn.pwd()
-            Log("INFO", "Server initialized: {}. Root: {}.".format(self.name, self.root_folder))
+            logger.info("Server initialized: {}. Root: {}.".format(self.name, self.root_folder))
         except Exception as e:
-            Log("ERROR",
-                "Server initialization failed! Server: {}. Root: {}. Error: {}".format(server_name, root_folder,
-                                                                                       str(e)))
+            logger.info("Server initialization failed! Server: {}. Root: {}. Error: {}".format(server_name, root_folder,
+                                                                                               str(e)))
             exit()
 
     def __str__(self):
@@ -42,7 +41,7 @@ class Server(object):
             self.ftp_conn = ftplib.FTP(self.name)
             self.ftp_conn.login(self.user, self.password)
         except Exception as e:
-            LogError(e)
+            logger.error(e)
             exit()
 
     def mod_folder(self, folder_name, base_path, delete=False):

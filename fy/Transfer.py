@@ -1,6 +1,3 @@
-from fy.Utils import LogError
-
-
 class Transfer(object):
     """
     Represents a mapping from an existing sender file to a potentially non-existing receiver file.
@@ -16,12 +13,8 @@ class Transfer(object):
         :param receiver_path: parent path of the destination file
         :param receiver_file: name of the destination file(can and usually is different from sender_file)
         """
-        try:
-            self.sender_path, self.sender_file = sender_path, sender_file
-            self.receiver_path, self.receiver_file = receiver_path, receiver_file
-        except Exception as e:
-            LogError(e)
-            exit()
+        self.sender_path, self.sender_file = sender_path, sender_file
+        self.receiver_path, self.receiver_file = receiver_path, receiver_file
 
     def __str__(self):
         return "sender_path: {}. " \
